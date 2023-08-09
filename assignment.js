@@ -11,7 +11,7 @@ function cubeNumber(number) {
 }
 const inputNumber = 5;
 const result = cubeNumber(inputNumber);
-console.log(`The cube of the number ${inputNumber} is:`, result);
+console.log(result);
 
 // problem-2
 function matchFinder(string1, string2) {
@@ -61,17 +61,15 @@ console.log(sort);
 
 // problem-4
 function findAddress(obj) {
-    const name = obj.name || '__';
     const address = obj.address || {};
     const street = address.street || '__';
     const house = address.house || '__';
     const society = address.society || '__';
-    return `${name} lives at ${street}, ${house}, ${society}`;
+    return `${street}, ${house}, ${society}`;
 }
 const person = {
-    name: 'John',
     address: {
-        street: 10,
+        street: '10',
         house: '15A',
         society: 'Earth perfect',
     }
