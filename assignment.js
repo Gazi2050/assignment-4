@@ -76,3 +76,23 @@ const person = {
 };
 const find = findAddress(person);
 console.log(find);
+
+// problem-5
+function canPay(changeArray, totalDue) {
+    if (changeArray.length === 0) {
+        return "Please input number";
+    }
+    let totalNotes = 0;
+    for (let i = 0; i < changeArray.length; i++) {
+        totalNotes += changeArray[i];
+        if (totalNotes >= totalDue) {
+            return true;
+        }
+    }
+    return false;
+}
+const change = [2, 3, 6];
+const chipsPrice = 10;
+const pay = canPay(change, chipsPrice);
+console.log(pay);
+
