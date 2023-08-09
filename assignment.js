@@ -32,3 +32,29 @@ const firstString = "John Doe";
 const secondString = "ohn";
 const result1 = matchFinder(firstString, secondString);
 console.log(result1);
+
+// problem-3
+function sortMaker(arr) {
+    if (arr.length !== 2) {
+        return "Please input less than three elements";
+    }
+    else if (arr[0] < 0 || arr[1] < 0) {
+        return "Invalid input. Please input positive number";
+    }
+    else if (typeof arr[0] != "number" || typeof arr[1] != "number") {
+        return "Invalid input. Please input number";
+    }
+    else if (arr[0] === arr[1]) {
+        return "equal";
+    }
+    else if (arr[1] > arr[0]) {
+        return [arr[1], arr[0]]
+    }
+    else if (arr[0] > arr[1]) {
+        return [arr[0], arr[1]]
+    }
+
+    return arr;
+}
+const sort = sortMaker([5, 10]);
+console.log(sort);
