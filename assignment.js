@@ -65,7 +65,7 @@ function findAddress(obj) {
     const street = address.street || '__';
     const house = address.house || '__';
     const society = address.society || '__';
-    return `${street}, ${house}, ${society}`;
+    return `${street},${house},${society}`;
 }
 const person = {
     address: {
